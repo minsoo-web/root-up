@@ -2,11 +2,14 @@
 
 ![banner](./assets/image/banner.png)
 
-## What is rcfg?
+> 🚧 It's still a project under development.  
+> 🙇‍♂️ Please Wait v0.2.0...
+
+## 🗂 What is rcfg?
 
 This package is built for component folder generator who use react and has specific folder template.
 
-## Installation
+## 🚗 Installation
 
 ```bash
 # using yarn
@@ -20,7 +23,7 @@ npm install -g react-component-folder-generator
 
 Note: add --save if you are using npm < 5.0.0
 
-## Example
+## 🚕 Example
 
 > Yan use npx
 

@@ -1,0 +1,14 @@
+{
+  "name": "react-component-generator",
+  "version": "0.1.0",
+  "description": "generator for react component folder by boilerplate template",
+  "main": "index.js",
+  "bin": {
+    "m-rcg": "./bin/index.js"
+  },
+  "author": "minsoo-web",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 'es3', 'es5', 'es2015', 'es2016', 'es2017','es2018', 'esnext' 가능
+    "module": "commonjs", //무슨 import 문법 쓸건지 'commonjs', 'amd', 'es2015', 'esnext'
+    "outDir": "./build", //js파일 아웃풋 경로바꾸기
+    "rootDir": "./src", //루트경로 바꾸기 (js 파일 아웃풋 경로에 영향줌)
+    "removeComments": true, //컴파일시 주석제거
+
+    "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+    "noImplicitAny": true, //any타입 금지 여부
+    "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기
+    "strictFunctionTypes": true, //함수파라미터 타입체크 강하게
+    "noImplicitThis": true, //this 키워드가 any 타입일 경우 에러내기
+    "alwaysStrict": true, //자바스크립트 "use strict" 모드 켜기
+
+    "noUnusedLocals": true, //쓰지않는 지역변수 있으면 에러내기
+    "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
+    "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기
+    "noFallthroughCasesInSwitch": true //switch문 이상하면 에러내기
+  },
+  "include": ["./src/**/*.ts"]
+}

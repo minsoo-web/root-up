@@ -14,6 +14,9 @@
   "bin": {
     "m-rcfg": "./bin/index.js"
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "author": "minsoo-web <zlemzlem5656@naver.com>",
   "keywords": [
     "boilerplate",

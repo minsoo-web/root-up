@@ -34,8 +34,8 @@ npx react-component-folder-generator -n TestComponent
 ### Case of No have Own template
 
 ```bash
-# m-rcfg -n <YOUR_COMPONET_FOLDER_NAME>
-m-rcfg -n TestComponent
+# m-rcfg generate -n <YOUR_COMPONET_FOLDER_NAME>
+m-rcfg generate -n TestComponent
 ```
 
 results is below

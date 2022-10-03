@@ -1,6 +1,6 @@
 {
   "name": "react-component-folder-generator",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "generator for react component folder by boilerplate template",
   "homepage": "https://github.com/minsoo-web/react-component-folder-generator",
   "repository": {
@@ -11,9 +11,11 @@
     "email": "zlemzlem5656@naver.com",
     "url": "https://github.com/minsoo-web/react-component-folder-generator/issues"
   },
-  "main": "./bin/index.ts",
   "bin": {
-    "m-rcfg": "ts-node ./bin/index.ts"
+    "m-rcfg": "./bin/index.js"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc"
   },
   "author": "minsoo-web <zlemzlem5656@naver.com>",
   "keywords": [

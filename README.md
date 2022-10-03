@@ -2,9 +2,6 @@
 
 ![banner](./assets/image/banner.png)
 
-> 🚧 It's still a project under development.  
-> 🙇‍♂️ Please Wait v0.2.0...
-
 ## 🗂 What is rcfg?
 
 This package is built for component folder generator who use react and has specific folder template.
@@ -23,24 +20,23 @@ npm install -g react-component-folder-generator
 
 Note: add --save if you are using npm < 5.0.0
 
-## 🚕 Example
-
-> Yan use npx
-
-```bash
-npx react-component-folder-generator -n TestComponent
-```
+## ⚙️ Configuaration Template
 
 ### Case of No have Own template
+
+If you don`t want customize your own template just command like below!
 
 ```bash
 # m-rcfg generate -n <YOUR_COMPONET_FOLDER_NAME>
 m-rcfg generate -n TestComponent
 ```
 
-results is below
+Default output location is src/components
+So,result is Below
 
-![banner](./assets/image/example/example-results.png)
+![result](./assets/images/example/example-results-folder-structure.png)
+
+![result](./assets/images/example/example-results.png)
 
 ### Case of your Own template
 
@@ -53,8 +49,16 @@ results is below
 
 3. custom your doc in `.template > template.json`
 
-| Name              | Type                                   | Default                | Description                                                                                                                   |
-| ----------------- | -------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| componentFilePath | string                                 | \_\_M_COMPONENT\_\_.js | Specify your component template file <br/> You can custom this file, but if change file name, make sure this path also change |
-| style             | "styled-components" \| "scss" \| "css" | styled-components      | kind of your styling methods for component.                                                                                   |
-| indexJs           | boolean                                | true                   | It is Using for can import by forder name                                                                                     |
+| Name       | Type                                      | Default                                                                                                     | Description                                                                                                                    |
+| ---------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| prefix     | string                                    | \_\_M_COMPONENT\_\_                                                                                         | Specify your component template file <br/> You can custom this file, but if change file name, make sure this value also change |
+| output     | string                                    | ./src/components                                                                                            | Define where components folder output Path                                                                                     |
+| fileConfig | {fileName ?: string; extends: "string"}[] | [{"extends": "tsx"},{"extends": "styles.ts"},{"extends": "types.ts"},{"fileName": "index","extends": "ts"}] | This value determines which files in the template have which extensions.                                                       |
+
+## 🚕 Example
+
+> Yan use npx
+
+```bash
+npx react-component-folder-generator -n TestComponent
+```

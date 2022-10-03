@@ -1,19 +1,4 @@
 {
   "prefix": "__M_COMPONENT__",
-  "output": "./src/components",
-  "fileConfig": [
-    {
-      "extends": "tsx"
-    },
-    {
-      "extends": "styles.ts"
-    },
-    {
-      "extends": "types.ts"
-    },
-    {
-      "fileName": "index",
-      "extends": "ts"
-    }
-  ]
+  "output": "./src/components"
 }

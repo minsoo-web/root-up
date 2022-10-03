@@ -1,5 +1,19 @@
 {
-  "componentFileName": "__M_COMPONENT__.js",
-  "style": "styled-components",
-  "indexJs": true
+  "prefix": "__M_COMPONENT__",
+  "output": "./src/components",
+  "fileConfig": [
+    {
+      "extends": "tsx"
+    },
+    {
+      "extends": "styles.ts"
+    },
+    {
+      "extends": "types.ts"
+    },
+    {
+      "fileName": "index",
+      "extends": "ts"
+    }
+  ]
 }

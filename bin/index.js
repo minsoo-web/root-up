@@ -3,22 +3,36 @@
 
 const yargs = require("yargs");
 const Doc = require("../lib/doc");
-const Generator = require("../lib/generate");
+const { Generator } = require("../lib/generate");
 
-yargs
-  .usage("🚀 Make your component directory with your own template")
-  .command("doc", "generate template folder with template.json", () => {}, Doc)
-  .command(
-    "generate",
-    "generate folder template for specific template",
-    function (yargs, helpOrVersionSet) {
-      return yargs.option("name", {
-        alias: "n",
-        describe: "Your component folder name",
-        type: "string",
-        default: "Example",
-        require: true
-      });
-    },
-    Generator
-  ).argv;
+yargs.usage("🚀 Make your component directory with your own template");
+
+yargs.command({
+  command: "doc",
+  describe: "generate template folder with template.json",
+  handler: Doc
+});
+
+yargs.command({
+  command: "generate",
+  describe: "generate folder template for specific template",
+  handler: Generator,
+  builder: {
+    name: {
+      alias: "n",
+      describe: "Your component folder name",
+      type: "string",
+      default: "Example",
+      require: true
+    }
+  }
+});
+
+yargs.command({
+  command: "*",
+  handler: () => {
+    console.log("first");
+  }
+});
+
+yargs.parse();

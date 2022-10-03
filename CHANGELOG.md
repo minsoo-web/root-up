@@ -13,3 +13,9 @@
 - add doc command
 - change template config
   - add template.json file
+
+### 0.2.3
+
+- hotfix
+  - doc command not working
+  - apply to template path -> path.resolve

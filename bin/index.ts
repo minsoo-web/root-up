@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-"use strict";
 
-const yargs = require("yargs");
-const Doc = require("../lib/doc");
-const { Generator } = require("../lib/generate");
+import yargs from "yargs";
+import Doc from "../lib/doc";
+import { Generator } from "../lib/generate";
 
 yargs.usage("🚀 Make your component directory with your own template");
 

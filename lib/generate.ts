@@ -1,11 +1,12 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { ArgumentsCamelCase } from "yargs";
 
 const readTemplate = (path = "./assets/data/.template") => {
   return JSON.parse(fs.readFileSync(`${path}/template.json`).toString());
 };
 
-const Generator = argv => {
+const Generator = (argv: ArgumentsCamelCase<{ name: string }>) => {
   console.log("✓ Check .template folder exists...\n");
 
   let templatePath = path.resolve(__dirname, "../assets/data/.template");
@@ -22,7 +23,7 @@ const Generator = argv => {
   const { prefix, output } = readTemplate(templatePath);
 
   // 옵션으로 들어온 컴포넌트 이름으로 대체
-  const folderName = argv.n;
+  const folderName = argv.name;
 
   if (!fs.existsSync(output)) {
     fs.mkdirSync(output, { recursive: true });
@@ -50,4 +51,4 @@ const Generator = argv => {
   console.log(`🚀 ${folderName} Component folder is made with m-rcfg!!!\n\n😎Happy Hacking`);
 };
 
-module.exports = { Generator, readTemplate };
+export { Generator, readTemplate };

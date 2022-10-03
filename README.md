@@ -1,10 +1,12 @@
 # React Component Folder Generator
 
-![banner](./assets/image/banner.png)
+![banner](./assets/images/banner.png)
 
-## 🗂 What is rcfg?
+## 🗂 What is m-rcfg?
 
 This package is built for component folder generator who use react and has specific folder template.
+
+> ~~m means for m of minoo~~
 
 ## 🚗 Installation
 
@@ -49,15 +51,14 @@ So,result is Below
 
 3. custom your doc in `.template > template.json`
 
-| Name       | Type                                      | Default                                                                                                     | Description                                                                                                                    |
-| ---------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| prefix     | string                                    | \_\_M_COMPONENT\_\_                                                                                         | Specify your component template file <br/> You can custom this file, but if change file name, make sure this value also change |
-| output     | string                                    | ./src/components                                                                                            | Define where components folder output Path                                                                                     |
-| fileConfig | {fileName ?: string; extends: "string"}[] | [{"extends": "tsx"},{"extends": "styles.ts"},{"extends": "types.ts"},{"fileName": "index","extends": "ts"}] | This value determines which files in the template have which extensions.                                                       |
+| Name   | Type   | Default             | Description                                                                                                                    |
+| ------ | ------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| prefix | string | \_\_M_COMPONENT\_\_ | Specify your component template file <br/> You can custom this file, but if change file name, make sure this value also change |
+| output | string | ./src/components    | Define where components folder output Path                                                                                     |
 
 ## 🚕 Example
 
-> Yan use npx
+> You can use npx
 
 ```bash
 npx react-component-folder-generator -n TestComponent

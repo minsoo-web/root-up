@@ -1,11 +1,12 @@
+import { TEMPLATE_PATH } from "constants/common";
 import fs from "fs";
 import path from "path";
 
-const Doc = () => {
+export const doc = () => {
   const exampleTemplateFolderPath = path.resolve(__dirname, "../assets/data/.template");
 
-  if (!fs.existsSync("./.template")) {
-    fs.mkdirSync("./.template");
+  if (!fs.existsSync(TEMPLATE_PATH)) {
+    fs.mkdirSync(TEMPLATE_PATH);
 
     const fileList = fs.readdirSync(exampleTemplateFolderPath);
     fileList.forEach(fileName => {
@@ -22,5 +23,3 @@ const Doc = () => {
     );
   }
 };
-
-export default Doc;

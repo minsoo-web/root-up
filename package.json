@@ -1,6 +1,6 @@
 {
   "name": "root-up",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "generator for template folder by boilerplate",
   "homepage": "https://github.com/minsoo-web/root-up",
   "repository": {
@@ -22,9 +22,10 @@
   "author": "minsoo-web <zlemzlem5656@naver.com>",
   "keywords": [
     "boilerplate",
-    "react",
-    "component generate",
-    "template"
+    "template generate",
+    "folder generate",
+    "template",
+    "template folder auto generate"
   ],
   "license": "MIT",
   "dependencies": {

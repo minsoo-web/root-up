@@ -27,3 +27,8 @@
 ### 2.0.5
 
 - Add output path input
+
+### 2.0.6
+
+- Remove doc generate config
+  - It will be work next time (2.1.0)

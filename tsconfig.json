@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
+    "outDir": "build",
     "sourceMap": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true // node_modules 타입 검증 skip
   },
   "moduleResolution": "node",
   "exclude": ["node_modules", "assets"]

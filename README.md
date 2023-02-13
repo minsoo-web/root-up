@@ -1,6 +1,6 @@
 # React Component Folder Generator
 
-![banner](./assets/images/banner.png)
+![banner](./src/assets/images/banner.png)
 
 ## 🗂 What is m-rcfg?
 
@@ -36,9 +36,9 @@ m-rcfg generate -n TestComponent
 Default output location is src/components
 So,result is Below
 
-![result](./assets/images/example/example-results-folder-structure.png)
+![result](./src/assets/images/example/example-results-folder-structure.png)
 
-![result](./assets/images/example/example-results.png)
+![result](./src/assets/images/example/example-results.png)
 
 ### Case of your Own template
 

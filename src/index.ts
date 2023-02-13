@@ -11,10 +11,6 @@ inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
 const main = async () => {
   const { templateList, configFile } = readTemplates();
 
-  if (templateList.length === 0) {
-    throw new Error("🔥 No Exist template in .template folder");
-  }
-
   const { name, template, outputPath } = await inquirer.prompt<Common.UserInput>(
     questions(templateList, configFile.output)
   );

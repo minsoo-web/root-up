@@ -19,3 +19,7 @@
 - hotfix
   - doc command not working
   - apply to template path -> path.resolve
+
+## v2
+
+### 2.0.0

@@ -1,4 +1,4 @@
-# React Component Folder Generator
+# Root Up
 
 ![banner](./src/assets/images/banner.png)
 

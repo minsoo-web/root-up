@@ -8,6 +8,8 @@ This package is built for folder structure generator who has specific folder tem
 
 ## 🚗 Installation
 
+### Global
+
 ```bash
 # using yarn
 yarn global add root-up
@@ -19,6 +21,26 @@ npm install -g root-up
 ```
 
 Note: add --save if you are using npm < 5.0.0
+
+### Local
+
+```bash
+# using yarn
+yarn add -D root-up
+```
+
+```bash
+# using npm
+npm install -D root-up
+```
+
+Add script in your package.json
+
+```json
+"scripts": {
+   "root-up": "root-up"
+},
+```
 
 ## Before you start
 
@@ -33,7 +55,7 @@ The `.template` folder must be configured as follows
    config.json
 ```
 
-Checkout `.template` folder demo ->
+[Checkout `.template` folder demo](https://github.com/minsoo-web/root-up/tree/main/.template)
 
 ### templateFolder
 
@@ -61,37 +83,17 @@ The `output` property is the property that path to template folder generated _re
 ## 🚀 How to run
 
 ```bash
+# Global installed
 root-up
+
+# or local installed
+yarn <command> # specified in your package.json
 ```
 
-Default output location is src/components
+Default output location is configured in .template/config.json
 
-So, result is Below
-
-![result](./src/assets/images/example/example-results-folder-structure.png)
-
-![result](./src/assets/images/example/example-results.png)
-
-### Case of your Own template
-
-1. make folder in your workspace name `.template`
-2. run command
-
-   ```bash
-   m-rcfg doc
-   ```
-
-3. custom your doc in `.template > template.json`
-
-| Name   | Type   | Default             | Description                                                                                                                    |
-| ------ | ------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| prefix | string | \_\_M_COMPONENT\_\_ | Specify your component template file <br/> You can custom this file, but if change file name, make sure this value also change |
-| output | string | ./src/components    | Define where components folder output Path                                                                                     |
-
-## 🚕 Example
+## 🚕 Demo
 
 > You can use npx
 
-```bash
-npx react-component-folder-generator -n TestComponent
-```
+<video src="./src/assets/videos/demo.mov" controls autoplay loop muted></video>

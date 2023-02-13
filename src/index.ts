@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import inquirer from "inquirer";
 import { questions } from "./constants/questions";
 import { generate } from "./lib/generate";

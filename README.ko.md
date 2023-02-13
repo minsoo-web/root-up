@@ -2,6 +2,8 @@
 
 ![banner](./src/assets/images/banner.png)
 
+[English](https://github.com/minsoo-web/root-up/blob/main/README.md) | 한국어
+
 ## 목차
 
 - [🗂 Root Up이 뭔데?](#🗂-root-up이-뭔데)

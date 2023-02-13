@@ -2,9 +2,11 @@
 
 ![banner](./src/assets/images/banner.png)
 
+English | [한국어](https://github.com/minsoo-web/root-up/blob/main/README.ko.md)
+
 ## Table of contents
 
-- [🗂 What is Root Up?](#-what-is-root-up?)
+- [🗂 What is Root Up?](#-what-is-root-up)
 - [🚗 Installation](#-installation)
   - [Global](#global)
   - [Local](#local)

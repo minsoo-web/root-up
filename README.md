@@ -2,39 +2,33 @@
 
 ![banner](./src/assets/images/banner.png)
 
-## 🗂 What is m-rcfg?
+## 🗂 What is Root Up?
 
-This package is built for component folder generator who use react and has specific folder template.
-
-> ~~m means for m of minoo~~
+This package is built for folder structure generator who has specific folder template.
 
 ## 🚗 Installation
 
 ```bash
 # using yarn
-yarn global add react-component-folder-generator
+yarn global add root-up
 ```
 
 ```bash
 # using npm
-npm install -g react-component-folder-generator
+npm install -g root-up
 ```
 
 Note: add --save if you are using npm < 5.0.0
 
-## ⚙️ Configuaration Template
-
-### Case of No have Own template
-
-If you don`t want customize your own template just command like below!
+## 🚀 How to run
 
 ```bash
-# m-rcfg generate -n <YOUR_COMPONET_FOLDER_NAME>
-m-rcfg generate -n TestComponent
+root-up
 ```
 
 Default output location is src/components
-So,result is Below
+
+So, result is Below
 
 ![result](./src/assets/images/example/example-results-folder-structure.png)
 

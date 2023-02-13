@@ -5,6 +5,8 @@ import { questions } from "./constants/questions";
 import { generate } from "./lib/generate";
 import { readTemplates } from "./lib/readTemplates";
 
+inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
+
 const main = async () => {
   const { templateList, configFile, templatePath } = readTemplates();
 

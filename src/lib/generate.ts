@@ -1,7 +1,6 @@
 import fs from "fs";
 
 export const generate = ({ prefix, templatePath, name, outputPath }: Common.GenerateParam) => {
-  console.log(outputPath);
   if (!fs.existsSync(outputPath)) {
     fs.mkdirSync(outputPath, { recursive: true });
   }
@@ -23,5 +22,5 @@ export const generate = ({ prefix, templatePath, name, outputPath }: Common.Gene
     );
   });
 
-  console.log(`🚀 ${name} folder is made with m-rcfg!!!\n😎Happy Hacking`);
+  console.log(`🚀 ${name} folder is made with root-up!!!\n\n😎Happy Hacking`);
 };

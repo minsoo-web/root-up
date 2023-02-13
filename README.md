@@ -96,4 +96,4 @@ Default output location is configured in .template/config.json
 
 > You can use npx
 
-<video src="./src/assets/videos/demo.mov" controls autoplay loop muted></video>
+https://user-images.githubusercontent.com/57122180/218425678-eabb9b8d-f7a2-4048-bec1-e32f2da900b0.mov

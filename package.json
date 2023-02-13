@@ -1,13 +1,12 @@
 {
   "name": "root-up",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "generator for react component folder by boilerplate template",
   "homepage": "https://github.com/minsoo-web/react-component-folder-generator",
   "repository": {
     "type": "git",
     "url": "https://github.com/minsoo-web/react-component-folder-generator"
   },
-  "type": "module",
   "bugs": {
     "email": "zlemzlem5656@naver.com",
     "url": "https://github.com/minsoo-web/react-component-folder-generator/issues"
@@ -17,7 +16,7 @@
   },
   "scripts": {
     "prepublishOnly": "tsc",
-    "build": "tsc",
+    "build": "tsc && node src/scripts/build.js",
     "dev": "npx tsx ./src/index.ts"
   },
   "author": "minsoo-web <zlemzlem5656@naver.com>",
@@ -33,6 +32,8 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
-    "@types/node": "^18.8.0"
+    "@types/node": "^18.8.0",
+    "esbuild": "^0.17.7",
+    "typescript": "^4.9.5"
   }
 }

@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "CommonJS",
     "target": "ESNext",
     "outDir": "build",
+    "baseUrl": "./src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "sourceMap": true,
+    "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "skipLibCheck": true // node_modules 타입 검증 skip
   },
   "moduleResolution": "node",
+  "include": ["./src/**/*"],
   "exclude": ["node_modules", "assets"]
 }

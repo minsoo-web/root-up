@@ -1,5 +1,4 @@
 node_modules
 .DS_Store
 build
-.template
 yarn-error.log

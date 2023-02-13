@@ -12,9 +12,16 @@ const main = async () => {
     throw new Error("🔥 No Exist template in .template folder");
   }
 
-  const { name, template } = await inquirer.prompt<Common.UserInput>(questions(templateList));
+  const { name, template, outputPath } = await inquirer.prompt<Common.UserInput>(
+    questions(templateList, configFile.output)
+  );
 
-  generate({ name, templatePath: `${templatePath}/${template}`, ...configFile });
+  generate({
+    name,
+    templatePath: `${templatePath}/${template}`,
+    prefix: configFile.prefix,
+    outputPath
+  });
 };
 
 main();

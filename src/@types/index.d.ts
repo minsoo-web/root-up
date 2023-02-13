@@ -7,9 +7,10 @@ declare module Common {
   interface UserInput {
     name: string;
     template: string;
+    outputPath: string;
   }
 
-  interface GenerateParam extends Config, Pick<UserInput, "name"> {
+  interface GenerateParam extends Omit<Config, "output">, Omit<UserInput, "template"> {
     templatePath: string;
   }
 }

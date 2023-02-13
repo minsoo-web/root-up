@@ -15,7 +15,7 @@
     "root-up": "./build/index.js"
   },
   "scripts": {
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "tsc && node src/scripts/build.js",
     "build": "tsc && node src/scripts/build.js",
     "dev": "npx tsx ./src/index.ts"
   },

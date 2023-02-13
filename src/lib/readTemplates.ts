@@ -3,7 +3,15 @@ import path from "path";
 const __dirname = path.resolve();
 
 const readConfigFile = (path = "src/assets/data/.template") => {
-  return JSON.parse(fs.readFileSync(`${path}/config.json`).toString());
+  let configFile;
+
+  try {
+    configFile = fs.readFileSync(`${path}/config.json`);
+  } catch (error) {
+    throw new Error("config.json is not found please checkout README.md");
+  }
+
+  return JSON.parse(configFile.toString());
 };
 
 export const readTemplates = () => {

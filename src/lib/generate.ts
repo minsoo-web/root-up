@@ -1,12 +1,13 @@
 import fs from "fs";
 
-export const generate = ({ output, prefix, name, templatePath }: Common.GenerateParam) => {
-  if (!fs.existsSync(output)) {
-    fs.mkdirSync(output, { recursive: true });
+export const generate = ({ prefix, templatePath, name, outputPath }: Common.GenerateParam) => {
+  console.log(outputPath);
+  if (!fs.existsSync(outputPath)) {
+    fs.mkdirSync(outputPath, { recursive: true });
   }
 
-  if (!fs.existsSync(`${output}/${name}`)) {
-    fs.mkdirSync(`${output}/${name}`);
+  if (!fs.existsSync(`${outputPath}/${name}`)) {
+    fs.mkdirSync(`${outputPath}/${name}`);
   }
 
   const reg = new RegExp(prefix, "gi");
@@ -17,7 +18,7 @@ export const generate = ({ output, prefix, name, templatePath }: Common.Generate
     const fileString = fs.readFileSync(`${templatePath}/${fileName}`, "utf-8").toString();
 
     fs.writeFileSync(
-      `${output}/${name}/${fileName.replace(reg, name)}`,
+      `${outputPath}/${name}/${fileName.replace(reg, name)}`,
       fileString.replace(reg, name)
     );
   });

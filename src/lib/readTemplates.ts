@@ -32,5 +32,9 @@ export const readTemplates = () => {
     templateList.splice(configFileIndex, 1);
   }
 
+  if (templateList.length === 0) {
+    throw new Error("🔥 No Exist template in .template folder");
+  }
+
   return { templateList, configFile };
 };

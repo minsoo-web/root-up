@@ -28,6 +28,10 @@ export const readTemplates = () => {
   const configFileIndex = templateList.findIndex(template => template === "config.json");
   let configFile: Common.Config = readConfigFile();
 
+  if (configFileIndex === -1) {
+    throw new Error("🔥 No Exist config.json file in .template folder");
+  }
+
   if (configFileIndex >= 0) {
     templateList.splice(configFileIndex, 1);
   }

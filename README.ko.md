@@ -84,7 +84,8 @@ prefix가 제대로 설정되었는지, config.json에 명시되어있는 내용
 ```json
 {
   "prefix": "내가_좋아하는_PREFIX",
-  "output": "내가_자주_사용하는_output_path"
+  "output": "내가_자주_사용하는_output_path",
+  "excludePath": "내가_무시하고_싶은_folder_name_prefix"
 }
 ```
 
@@ -93,11 +94,13 @@ prefix가 제대로 설정되었는지, config.json에 명시되어있는 내용
 입력된 `name`으로 대체됩니다.
 
 **output**:
-The `output` property is the property that path to template folder generated _related path_ to your command is executed path
-
-**output**:
 `output` 속성은 템플릿을 통해 생성된 폴더가 위치할 경로를 명시합니다.  
 명령어가 실행된 workspace를 기준으로 상대경로를 명시합니다.
+
+**excludePath**:  
+excludePath 속성은 생성할 폴더를 검색할 때 무시하고 싶은 폴더 이름을 설정할 수 있습니다.  
+(예를 들면, .yarn 폴더와 같이요!)  
+default로 `node_modules`와 `.git`이 설정되어있습니다.
 
 ## 🚀 실행 방법
 

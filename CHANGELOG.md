@@ -32,3 +32,7 @@
 
 - Remove doc generate config
   - It will be work next time (2.1.0)
+
+### 2.0.7
+
+- Add exclude path config

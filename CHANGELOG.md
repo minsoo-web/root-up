@@ -42,3 +42,4 @@
 - Refactoring (with @jgjgill)
   - refactoring: 에러 관련 코드 위치 변경 (#3)
 - feat: Add Edge case cover for no exists config.json
+- Add exclude path config

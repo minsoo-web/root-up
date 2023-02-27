@@ -84,7 +84,8 @@ The `.config.json` file must be configured as follows
 ```json
 {
   "prefix": "YOUR_FAVORITE_PREFIX",
-  "output": "YOUR_DEFAULT_OUTPUT_PATH_IN_YOUR_WORKSPACE"
+  "output": "YOUR_DEFAULT_OUTPUT_PATH_IN_YOUR_WORKSPACE",
+  "excludePath": ["YOUR_IGNORE_PREFIX"]
 }
 ```
 
@@ -94,6 +95,10 @@ Write down the name of the file, the code used in the template.
 
 **output**:
 The `output` property is the property that path to template folder generated _related path_ to your command is executed path
+
+**excludePath**:  
+The `excludePath` property is the property that can ignore path finding in searching path to generate folder (e.g: .yarn folder)  
+Default is `node_modules` and `.git`
 
 ## 🚀 How to run
 

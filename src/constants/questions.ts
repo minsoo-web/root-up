@@ -11,7 +11,10 @@ type QuestionWithChoices = Question & { choices?: string[] } & Partial<{
 
 export const componentNameQuestion: QuestionWithChoices[] = [];
 
-export const questions = (templates: string[], outputPath: string): QuestionWithChoices[] => [
+export const questions = (
+  templates: string[],
+  configFile: Common.Config
+): QuestionWithChoices[] => [
   {
     name: "name",
     message: "What is your folder name?",
@@ -26,7 +29,15 @@ export const questions = (templates: string[], outputPath: string): QuestionWith
   {
     type: "fuzzypath",
     name: "outputPath",
-    excludePath: nodePath => nodePath.startsWith("node_modules") || nodePath.startsWith(".git"),
+    excludePath: nodePath => {
+      return configFile.excludePath.some(exclude => {
+        return (
+          nodePath.startsWith("node_modules") ||
+          nodePath.startsWith(".git") ||
+          nodePath.startsWith(exclude)
+        );
+      });
+    },
     // excludePath :: (String) -> Bool
     // excludePath to exclude some paths from the file-system scan
     excludeFilter: nodePath => nodePath === ".",
@@ -41,7 +52,7 @@ export const questions = (templates: string[], outputPath: string): QuestionWith
     // rootPath :: String
     // Root search directory
     message: "Select a target directory for your component:",
-    default: outputPath,
+    default: configFile.output,
     suggestOnly: false,
     // suggestOnly :: Bool
     // Restrict prompt answer to available choices or use them as suggestions

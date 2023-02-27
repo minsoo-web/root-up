@@ -12,7 +12,7 @@ const main = async () => {
   const { templateList, configFile } = readTemplates();
 
   const { name, template, outputPath } = await inquirer.prompt<Common.UserInput>(
-    questions(templateList, configFile.output)
+    questions(templateList, configFile)
   );
 
   generate({

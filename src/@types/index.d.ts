@@ -2,6 +2,7 @@ declare module Common {
   interface Config {
     prefix: string;
     output: string;
+    excludePath: string[];
   }
 
   interface UserInput {
@@ -10,7 +11,7 @@ declare module Common {
     outputPath: string;
   }
 
-  interface GenerateParam extends Omit<Config, "output">, Omit<UserInput, "template"> {
+  interface GenerateParam extends Pick<Config, "prefix">, Omit<UserInput, "template"> {
     templatePath: string;
   }
 }
